@@ -21,12 +21,6 @@ module.exports = new Script({
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say(`Great! Nice to meet you ${name}.`))
-                .then(() => 'whatNext');
-        }
-    },
-	
-	whatNext: {
-        prompt: (bot) => bot.say('What would you like to do next? %[Learn about Erin](postback:learn_about_erin) or %[Tweet Erin](http://ow.ly/FKaT30bqNaS)')
                 .then(() => 'finish');
         }
     },
